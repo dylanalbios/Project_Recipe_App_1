@@ -14,13 +14,17 @@ function App() {
     setRecipes([...recipes, recipe]);
   }
 
-
+  const handleRecipeDelete = (recipeIndex) => {
+    const updatedRecipes = [...recipes];
+    updatedRecipes.splice(recipeIndex, 1);
+    setRecipes(updatedRecipes);
+  };
 
   
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList />
+      <RecipeList recipes={recipes} onRecipeDelete={handleRecipeDelete} />
       <RecipeCreate onRecipeCreate={handleRecipeCreate} />
     </div>
   );
