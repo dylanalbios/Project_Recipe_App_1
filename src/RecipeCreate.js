@@ -19,7 +19,7 @@ function RecipeCreate() {
   const handleIngredientsChange = (event) => setIngredients(event.target.value);
 
   const [preparation, setPreparation] = useState("");
-  const handlePreparationChange = (event) => setreparation(event.target.value);
+  const handlePreparationChange = (event) => setPreparation(event.target.value);
 
 
 
