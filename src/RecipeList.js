@@ -29,7 +29,7 @@ function RecipeList({ recipes, onRecipeDelete }) {
         </thead>
         <tbody>
           {recipes.map((recipe) => (
-            <tr key={recipes.id}>
+            <tr key={recipe.id}>
               <td>{recipe.name}</td>
               <td>{recipe.cuisine}</td>
               <td><img src={recipe.photo} alt={recipe.name} /></td>
