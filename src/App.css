@@ -106,3 +106,8 @@ img {
 .content_td {
   overflow: auto;
 }
+
+/* Zebra Striping for tbody */
+tbody tr:nth-child(odd) {
+  background-color: #fff0c7;
+}
