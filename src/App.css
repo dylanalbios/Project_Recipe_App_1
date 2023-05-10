@@ -61,9 +61,11 @@ table {
 }
 
 /* Column Size for thead */
+
 th:nth-child(1), 
 th:nth-child(2), 
-th:nth-child(3) {
+th:nth-child(3),  
+th:nth-child(6) {
   width: 10%;
 }
 
@@ -74,3 +76,21 @@ th:nth-child(5) {
 
 /* Column size for tbody */
 
+td:nth-child(1), 
+td:nth-child(2), 
+td:nth-child(3),  
+td:nth-child(6) {
+  width: 10%;
+}
+
+td:nth-child(4), 
+td:nth-child(5) {
+  width: 30%;
+}
+
+.content_td p {
+  max-width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+}
