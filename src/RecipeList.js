@@ -6,10 +6,26 @@ function RecipeList({ recipes, onRecipeDelete }) {
   // TODO: Create at least one additional component that is used by this component.
   // TODO: Each recipe row must have a delete button - <button name="delete">Delete</button> - that deletes the post when clicked
 
-  const handleDelete= (id) => {
-    onRecipeDelete(id);
-  };
+  function Recipe({ recipe }) {
+    const handleDelete = () => {
+      onRecipeDelete(recipe.id);
+    };
 
+
+
+    return (
+        <tr key={recipe.id}>
+            <td>{recipe.name}</td>
+            <td>{recipe.cuisine}</td>
+            <td><img src={recipe.photo} alt={recipe.name} /></td>
+            <td>{recipe.ingredients}</td>
+            <td>{recipe.preparation}</td>
+            <td>
+              <button onClick={handleDelete} name="delete">Delete</button>
+            </td>
+          </tr>
+    );
+  }
 
 
 
@@ -29,16 +45,7 @@ function RecipeList({ recipes, onRecipeDelete }) {
         </thead>
         <tbody>
           {recipes.map((recipe) => (
-            <tr key={recipe.id}>
-              <td>{recipe.name}</td>
-              <td>{recipe.cuisine}</td>
-              <td><img src={recipe.photo} alt={recipe.name} /></td>
-              <td>{recipe.ingredients}</td>
-              <td>{recipe.preparation}</td>
-              <td>
-                <button onClick={() => handleDelete(recipe.id)} name="delete">Delete</button>
-              </td>
-            </tr>
+            <Recipe key={recipe.id} recipe={recipe} />
           ))}
         </tbody>
       </table>
