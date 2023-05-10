@@ -94,3 +94,10 @@ td:nth-child(5) {
   overflow-y: auto;
   text-overflow: ellipsis;
 }
+
+/* Scaling Images */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
