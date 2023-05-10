@@ -12,10 +12,12 @@ function App() {
 
   const handleRecipeCreate = (recipe) => {
     setRecipes([...recipes, recipe]);
-  }
+  };
 
-  const handleRecipeDelete = (recipeId) => {
-    setRecipes((prevRecipes) => prevRecipes.filter((recipe) => recipe.id !== recipeId));
+  const handleRecipeDelete = (name) => {
+    setRecipes((prevRecipes) => 
+      prevRecipes.filter((recipe) => recipe.name !== name)
+    );
   };
 
   
