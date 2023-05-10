@@ -19,6 +19,12 @@ html {
   font-family: 'helvetica neue', sans-serif;
 }
 
+h1 {
+  font-family: 'Playfair Display SC';
+  text-align: center;
+  font-size: 64px;
+}
+
 thead th, tfoot th {
   font-family: 'Rock Salt';
 }
