@@ -14,10 +14,8 @@ function App() {
     setRecipes([...recipes, recipe]);
   }
 
-  const handleRecipeDelete = (recipeIndex) => {
-    const updatedRecipes = [...recipes];
-    updatedRecipes.splice(recipeIndex, 1);
-    setRecipes(updatedRecipes);
+  const handleRecipeDelete = (recipeId) => {
+    setRecipes((prevRecipes) => prevRecipes.filter((recipe) => recipe.id !== recipeId));
   };
 
   
